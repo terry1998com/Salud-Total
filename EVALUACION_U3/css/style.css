@@ -1,0 +1,385 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    /* Gris muy suave de fondo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* --- Contenedor Principal (Tarjeta blanca) --- */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Específicos para Login --- */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* --- Formularios --- */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Para que el padding no afecte el ancho */
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* --- Botones --- */
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+/* Botón Principal (Azul) */
+button[type="submit"],
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    /* Botones de formulario ocupan todo el ancho */
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de Enlace (para volver o acciones secundarias) */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+/* Botones de Acción en Tabla (Pequeños) */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    /* Amarillo */
+    color: #333;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    /* Rojo */
+    color: white;
+}
+
+/* --- Tablas (Requisito Avanzado) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* --- Mensajes de Alerta --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Barra Superior (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    margin-bottom: 0;
+    width: auto;
+    flex-grow: 1;
+}
+
+.search-bar button {
+    width: auto;
+}
+
+/* === SIDEBAR MODERNO === */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100%;
+    background: #1f3b73;
+    color: white;
+    padding: 20px 15px;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 18px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background: #284c9f;
+}
+
+.sidebar-menu .logout {
+    background: #d9534f;
+}
+
+.sidebar-menu .logout:hover {
+    background: #c9302c;
+}
+
+/* Contenedor principal */
+.content {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        transform: translateX(-200px);
+        transition: 0.3s;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* === Extra: modal, carrito y botones === */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-cart {
+    background: #10b981;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cart:hover {
+    background: #0f9f6e;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #cdd6e3;
+    color: #1f3b73;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 560px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cart-badge {
+    background: #d9534f;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-left: 6px;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.empty {
+    color: #666;
+    padding: 20px;
+    text-align: center;
+}
+
+/* === BOTÓN HAMBURGUESA PARA MÓVIL === */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #1f3b73;
+    color: white;
+    padding: 10px 15px;
+    font-size: 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
